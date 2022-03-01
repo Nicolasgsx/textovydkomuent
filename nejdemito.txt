@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Prihlasenie</title>
+/<head>
+    <body>
+<?php
+if($_POST["heslo"] == $_POST["heslo_znova"])
+{
+echo "Registracia prebehla uspesne"
+}
+else{
+echo "Registracia nevysla skontroluj ci si vsetko zadal spravne"
+}
+/*
+Todo: skontrolovat ci su vsetky policka zadane
+
+Todo: skontrolovat ci password verify je rovnake ako password
+
+Todo: skontrolovat biele znaky(medzery, TAB) malo by sa to volat white spaces, trimm aleno sql-injection
+
+Todo: skusit pridat usera do databazy
+*/
+?>
+</body>
+</html>
+___________________________________________________________________________________________________________________________________________________________________________
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>Registracia</title>
+</head>
+<body>
+<form action="register_scripts.php" method="post">
+    <div class="register">
+        <h1>Registracia</h1>
+        <p>Vytvorte si svoje prihlasovacie udaje a zopakujte heslo</p>
+        <hr>
+
+    <label for="meno"><b>Prihlasovacie meno:</b> </label>
+    <input type="text" name="meno" id="meno" required>
+
+    <label for="email"><b>Email:</b> </label>
+    <input type="mail" name="email" id="email" required>
+
+    <label for="heslo"><b>Heslo:</b> </label>
+    <input type="password" name="heslo" id="heslo" required>
+
+    <label for="heslo_znova"><b>Znova heslo:</b> </label>
+    <input type="password" name="heslo_znova" id="heslo_znova" required>
+        <hr>
+
+    <button type="submit" class="regbtn">Registracia</button>
+</div>
+</form>
+</body>
+</html>
+___________________________________________________________________________________________________________________________________________________________________________
+
+___________________________________________________________________________________________________________________________________________________________________________
+
+___________________________________________________________________________________________________________________________________________________________________________
